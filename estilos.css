@@ -1,0 +1,97 @@
+/* CSS DOCUMENT */
+@charset "UTF-8";
+
+@font-face {
+    font-family: "CD Regular";
+    src: url(fuentes/ClashDisplay-Regular.otf) format(.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+font body {
+    background-color: #ffffff;
+}
+
+main {
+    background-color: #ff97fd;
+}
+
+.parteuno {
+    height: 100vh;
+    width: 100%;
+    padding: 18px 18px;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.partedos {
+    height: 100vh;
+    width: 100%;
+    padding: 18px 18px;
+    background-color: #dddddd;
+    box-sizing: border-box;
+
+}
+
+
+h1 {
+    text-align: left;
+    font-size: 2rem;
+    font-family: "CD Regular", sans-serif;
+}
+
+
+nav {
+    text-align: end;
+}
+
+.contenedor-imagen {
+    width: 252px;
+    height: 444px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+}
+
+.contenedor-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #83d2ff;
+}
+
+.texto-ovalado {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 50%;
+    background-color: #3498db;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    transform: rotate(-8deg);
+    position: absolute;
+    top: -39px;
+    left: -31px
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #333333;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    max-width: 300px;
+    margin: 20px auto;
+    position: relative;
+    padding: 40px 20px 20px 20px;
+    margin: 50px auto;
+
+}
+

@@ -2,22 +2,40 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: "CD Regular";
-    src: url(fuentes/ClashDisplay-Regular.otf) format(.otf);
+    font-family: "Morally serif";
+    src: url(fuentes/Morally\ Serif.otf) format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Barlow Condensed";
+    src: url(fuentes/BarlowCondensed-Regular.ttf) format("opentype");
     font-weight: normal;
     font-style: normal;
 }
 
 font body {
-    background-color: #ffffff;
+    background-color: #f1f1f1;
 }
 
 main {
-    background-color: #ff97fd;
+    background-color: #f1f1f1;
+}
+
+.inclinada {
+    transform: rotate(-11deg);
+}
+
+.inclinada-dos {
+    max-width: 260px;
+    height: auto;
+    transform: rotate(11deg);
+    margin-right: 60px;
 }
 
 .parteuno {
-    height: 100vh;
+
     width: 100%;
     padding: 18px 18px;
     background-color: #f0f0f0;
@@ -26,72 +44,137 @@ main {
     align-content: center;
     justify-content: center;
     gap: 100px;
+    padding-top: 100px;
 }
 
 .partedos {
-    height: 100vh;
     width: 100%;
     padding: 18px 18px;
-    background-color: #dddddd;
+    padding-top: 100px;
+    background-color: #f1f1f1;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+
+.partetres {
+    width: 100%;
+    padding: 100px 18px 80px 18px;
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
 
-h1 {
+nav a {
+
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.2rem;
+    font-weight:
+}
+
+
+.parteuno h1 {
+    text-align: left;
+    font-size: 5rem;
+    font-family: "Morally serif", serif;
+}
+
+.partedos h1 {
     text-align: left;
     font-size: 2rem;
-    font-family: "CD Regular", sans-serif;
+    font-family: "Morally serif", serif;
+    width: 100%;
+    margin-bottom: 50px;
 }
 
+.partetres h1 {
+
+    text-align: center;
+    font-family: "Morally serif", serif;
+
+}
+
+h2 {
+    text-align: left;
+    font-size: 2rem;
+    font-family: "Barlow Condensed", sans-serif;
+}
 
 nav {
     text-align: end;
 }
 
-.contenedor-imagen {
-    width: 252px;
-    height: 444px;
-    overflow: hidden;
-    border-radius: 50%;
-    position: relative;
-}
-
-.contenedor-imagen img {
+.contenedor-proyectos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-color: #83d2ff;
+
 }
 
-.texto-ovalado {
-    display: inline-block;
-    padding: 10px 15px;
-    border-radius: 50%;
-    background-color: #3498db;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-    transform: rotate(-8deg);
-    position: absolute;
-    top: -39px;
-    left: -31px
-}
-
-.tarjeta {
+.bloque-texto {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: 1px solid #333333;
-    border-radius: 12px;
-    background-color: #f9f9f9;
-    max-width: 300px;
-    margin: 20px auto;
-    position: relative;
-    padding: 40px 20px 20px 20px;
-    margin: 50px auto;
+    gap: 0px;
 
 }
 
+.bloque-texto h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    line-height: 1.0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.bloque-texto h1 {
+    font-family: "Morally Serif", serif;
+    margin: 0;
+}
+
+.contenedor-bloques {
+    width: 60%;
+
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    gap: 30px 40px;
+
+}
+
+.bloque {
+    width: 45%;
+
+    box-sizing: border-box;
+}
+
+@import url('https://googleapis.com');
+
+
+.bloque p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #444444;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    padding: 40px 0;
+    margin: 0;
+}

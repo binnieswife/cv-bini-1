@@ -36,102 +36,40 @@
     font-style: italic;
 }
 
+html,
 body {
-    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+
+    background-color: #FDD4E8;
 }
 
 main {
-    background-color: #f1f1f1;
+    background-color: #FDD4E8;
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
 }
 
 header {
-    padding: 11px;
+    background-color: #6A5248;
+    padding: 13px 50px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-content: stretch;
-    align-items: baseline;
-}
-
-
-.inclinada {
-    transform: rotate(-11deg);
-}
-
-.inclinada-dos {
-    max-width: 150px;
-    transform: rotate(11deg);
-    margin-right: 60px;
-}
-
-.parteuno {
-
-    width: 100%;
-    padding: 60px 18px;
-    background-color: #f1f1f1;
-    box-sizing: border-box;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 100px;
-}
-
-.partedos {
-    width: 100%;
-    padding: 18px 18px;
-    background-color: #f1f1f1;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-
-}
-
-.partetres {
-    width: 100%;
-    padding: 50px 18px 80px 18px;
-    background-color: #f1f1f1;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-
-nav a {
-    font-size: 1.2rem;
-}
-
-
-.parteuno h1 {
-    text-align: left;
-    font-size: 5rem;
-    font-family: "Morally serif", serif;
-}
-
-.partedos h2 {
-    text-align: left;
-    font-size: 2rem;
-    font-family: "Morally serif", serif;
-    width: 100%;
-    margin-bottom: 50px;
-}
-
-.partetres h2 {
-
-    text-align: center;
-    font-family: "Morally serif", serif;
-    margin-bottom: 70px;
-
-}
-
-h2 {
-    text-align: left;
-    font-size: 2rem;
-    font-family: "Barlow Condensed", sans-serif;
 }
 
 nav {
@@ -146,8 +84,8 @@ nav a {
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
-    color: #e9b4ce;
-    border: 2px solid #e9b4ce;
+    color: #FDD4E8;
+    border: 2px solid #FDD4E8;
     border-radius: 50px;
     padding: 8px 22px;
     display: inline-block;
@@ -155,85 +93,66 @@ nav a {
 
 }
 
-.contenedor-proyectos {
+
+.pie-pagina {
+    min-height: 47px;
+    background-color: #ffffff;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-    width: 100%;
-
-}
-
-.bloque-texto {
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-
-}
-
-.bloque-texto h2 {
-    font-family: 'Barlow Condensed', sans-serif;
-    line-height: 1.0;
-    margin: 0;
-    margin-bottom: 5px;
-    max-width: 280px;
-}
-
-.bloque-texto h1 {
-    font-family: "Morally Serif", serif;
-    margin: 0;
-}
-
-
-.bloque h2 {
-    width: 45%;
-    font-family: 'Barlow Condensed', sans-serif;
-    box-sizing: border-box;
-    margin-bottom: 1rem
-}
-
-
-.bloque p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #444444;
-}
-
-footer ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    gap: 40px;
-    padding: 40px 0;
-    margin: 0;
-}
-
-footer {
-    background-color: #e9b4ce;
-
-}
-
-.contenedor-columnas {
-    width: 65%;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 30px 50px;
+    box-sizing: border-box;
+
 }
 
-
-.columna-izquierda,
-.columna-derecha {
-    width: 48%;
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
+.pie-pagina p {
+    font-family: 'Open Sans', sans-serif;
+    color: #6A5248;
+    font-size: 11px;
+    line-height: 0.9;
 }
 
-h3 {
-    text-align: left;
-    font-size: 1.1rem;
-    font-family: "Open Sans Semibold", sans-serif;
+.datos-contacto {
+    text-align: right;
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 160px;
+    margin-bottom: 4px;
+    color: #5c443c;
+    font-family: 'Morally serif', sans-serif;
+    margin-bottom: -33px;
+    margin: -35px;
+}
+
+.hero .subtitulo {
+    margin-top: 0;
+    color: #70544c;
+    font-size: 2.3rem;
+}
+
+.img-sticker-uno {
+
+    position: absolute;
+    top: 0%;
+    left: 19%;
+    width: 230px;
+    height: auto;
+
+}
+
+.img-sticker-dos {
+
+    position: absolute;
+    bottom: 7%;
+    right: 24%;
+    width: 150px;
+    height: auto;
+
 }

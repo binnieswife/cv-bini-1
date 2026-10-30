@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Binnie</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="img/colitarosaclarito.png" alt="colita rosa" width="34" />
+        </div>
+
+               <nav>
+            <a href="sobremi.html" class="nav-link">
+                Sobre mí
+                <img src="img/nav-sticker.png" alt="" class="nav-sticker">
+            </a>
+
+            <a href="proyectos.html" class="nav-link">
+                Proyectos
+                <img src="img/nav-sticker.png" alt="" class="nav-sticker">
+            </a>
+
+            <a href="contacto.html" class="nav-link">
+                Contacto
+                <img src="img/nav-sticker.png" alt="" class="nav-sticker">
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-card">
+            <div class="form-header">
+                <img src="img/sticker-contacto.png" alt="sticker de contacto titulo" width="200px">
+            </div>
+
+          
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">NOMBRE</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" />
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">CORREO</label>
+                    <input type="email" id="correo" name="correo" placeholder="Tu correo" />
+                </div>
+
+                <div class="form-group">
+                    <label>PROYECTO</label>
+
+                    <div class="project-options">
+
+                        <label class="project-option">
+                            <input type="radio" name="proyecto" value="experimental" />
+                            <img src="img/experimental-sin-color.png" data-original="img/experimental-sin-color.png"
+                                data-alternativa="img/experimental-con-color.png" alt="Experimental" class="project-img"
+                                width="130" />
+                        </label>
+
+                        <label class="project-option">
+                            <input type="radio" name="proyecto" value="branding" />
+                            <img src="img/branding-sin-color.png" data-original="img/branding-sin-color.png"
+                                data-alternativa="img/branding-con-color.png" alt="Branding" class="project-img"
+                                width="100" />
+                        </label>
+
+                        <label class="project-option">
+                            <input type="radio" name="proyecto" value="editorial" />
+                            <img src="img/editorial-sin-color.png" data-original="img/editorial-sin-color.png"
+                                data-alternativa="img/editorial-con-color.png" alt="Editorial" class="project-img"
+                                width="100" />
+                        </label>
+
+                    </div>
+                </div>
+
+       
+                <div class="form-group">
+                    <label for="mensaje">MENSAJE</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Hola binnie..."></textarea>
+                </div>
+            </form>
+        </div>
+
+
+   <div class="submit-section">
+    <p class="reminder-text">
+        ¡No te olvides de enviar la informacion!
+    </p>
+
+    <button type="submit" class="btn-enviar">
+        <img
+            src="img/sticker-enviar-blanco.png"
+            data-blanco="img/sticker-enviar-blanco.png"
+            data-color="img/sticker-enviar-color.png"
+            alt="Enviar"
+            class="enviar-img"
+        />
+    </button>
+</div>
+</main>
+
+    <footer class="pie-pagina">
+
+        <div class="datos-academicos">
+            <p>Computación 3</p>
+            <p>Cátedra Wischnevsky</p>
+            <p>Segundo cuatrimestre 2026</p>
+        </div>
+
+        <div class="datos-contacto" id="contacto">
+            <p>+54 1131523876</p>
+            <p>erikasilva4512@gmail.com</p>
+            <p>© Todos los derechos reservados</p>
+        </div>
+
+    </footer>
+
+    <script>
+        const opcionesProyecto = document.querySelectorAll(
+            'input[name="proyecto"]'
+        );
+
+        opcionesProyecto.forEach(function (opcion) {
+            opcion.addEventListener("change", function () {
+
+       
+                document.querySelectorAll(".project-img").forEach(function (imagen) {
+                    imagen.src = imagen.dataset.original;
+                });
+
+          
+                const imagenSeleccionada = opcion
+                    .closest(".project-option")
+                    .querySelector(".project-img");
+
+            
+                imagenSeleccionada.src = imagenSeleccionada.dataset.alternativa;
+            });
+        });
+    </script>
+
+    <script>
+    const botonEnviar = document.querySelector(".enviar-img");
+
+    botonEnviar.addEventListener("mouseenter", function() {
+        botonEnviar.src = botonEnviar.dataset.color;
+    });
+
+    botonEnviar.addEventListener("mouseleave", function() {
+        botonEnviar.src = botonEnviar.dataset.blanco;
+    });
+</script>
+
+</body>
+
+</html>
